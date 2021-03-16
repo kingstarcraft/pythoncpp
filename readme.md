@@ -9,11 +9,17 @@ A C++ library for call python module
 
 
 ## Usage
-On windows, download prebulid 
+### Windows
+Download [prebuilt binaries](https://github.com/kingstarcraft/cpython/releases/download/v1.0.0/zero.zip) for your project.
+
+Or compile the source code with VS2017:
+- Open windows/python/python.props and set PythonDir=$(your python root) at line 10.
+- Open windows/zero.sln and build libpython project to generate python.dll and python.lib
 
 
 
-## Example: Call opencv module
+## Example
+- Call opencv module
 ```cpp
 #ifdef USE_OPENCV
 #include <opencv2/opencv.hpp>
