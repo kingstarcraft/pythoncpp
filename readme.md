@@ -1,4 +1,4 @@
-#  CPython
+#  PythonCPP
 A C++ library for call python module
 
 ## Dependence
@@ -10,7 +10,7 @@ A C++ library for call python module
 
 ## Usage
 ### Windows
-Download [prebuilt binaries](https://github.com/kingstarcraft/cpython/releases/download/v1.0.0/zero.zip) for your project.
+Download [prebuilt binaries](https://github.com/kingstarcraft/pythoncpp/releases/download/v1.0.0/zero.zip) for your project.
 
 Or compile the source code with VS2017:
 - Open windows/python/python.props and set PythonDir=$(your python root) at line 10.
