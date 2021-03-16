@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <ItemGroup>
+    <BuildMacro Include="OpenCVDir">
+      <Value>$(OpenCVDir)</Value>
+    </BuildMacro>
+  </ItemGroup>
+  <PropertyGroup Label="UserMacros">
+    <OpenCVDir>A:\C++\OpenCV\v4.3.0</OpenCVDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LocalDebuggerEnvironment>$(OpenCVDir)\$(Platform)\$(PlatformToolset)\bin;$(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
+    <IncludePath>$(OpenCVDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OpenCVDir)\$(Platform)\$(PlatformToolset)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_OPENCV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies Condition="'$(Configuration)'=='Debug'">opencv_world430d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(Configuration)'=='Release'">opencv_world430.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>
