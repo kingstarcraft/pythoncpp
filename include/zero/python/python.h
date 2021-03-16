@@ -14,28 +14,6 @@ namespace zero {
 	public:
 		class ZERO_API Object {
 		public:
-
-			//	template<typename... Atype>
-			//	Object operator()(Atype&&... arguments) const{
-			//		std::vector<void*> list;
-			//		std::vector<uint8_t> mask;
-			//		for_each(std::forward_as_tuple(arguments...), [&](const auto& argument) {
-			//			list.push_back(python::Convert(argument));
-			//			mask.push_back(
-			//				typeid(void*) != typeid(argument) &&
-			//				typeid(const void*) != typeid(argument) &&
-			//				typeid(Object) != typeid(argument) &&
-			//				typeid(const Object) != typeid(argument)
-			//			);
-			//		});
-			//		auto reval = this->call(list);
-			//		for (int i = 0; i < mask.size(); i++) { if (mask[i]) { python::Release(list[i]); } }
-			//		return reval;
-			//	}
-
-
-//			virtual Object create() const = 0;
-			//const Object &operator[](const std::string& path) const;
 			std::string type() const;
 			std::vector<std::string> attribute() const;
 			template <typename Type>
