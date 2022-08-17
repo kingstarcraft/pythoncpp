@@ -6,7 +6,7 @@ A C++ library for call python module
 - C++17
 - python>=3
 - Opencv(optional)
-
+- Release(DEBUG may not work with 3.8.5, there is a bug in python_d.lib)
 
 ## Usage
 ### Windows
